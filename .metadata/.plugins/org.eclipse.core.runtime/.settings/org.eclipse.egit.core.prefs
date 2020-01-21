@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=C\:\\Users\\RATSIMBAZAFY\\Desktop\\WorkSpaceCVBuilder\\gestionCv\\.git;
-GitRepositoriesView.GitDirectories.relative=gestionCv\\.git;
+GitRepositoriesView.GitDirectories=C\:\\Users\\RATSIMBAZAFY\\Desktop\\WorkSpaceCVBuilder\\gestionCv\\.git;C\:\\Users\\RATSIMBAZAFY\\Desktop\\WorkSpaceCVBuilder\\.git;
+GitRepositoriesView.GitDirectories.relative=gestionCv\\.git;.git;
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1
