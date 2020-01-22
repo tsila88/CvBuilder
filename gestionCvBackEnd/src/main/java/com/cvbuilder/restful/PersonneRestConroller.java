@@ -21,7 +21,7 @@ import com.cvbuilder.dao.PersonneRepository;
 import com.cvbuilder.entities.Personne;
 
 @RestController
-//@CrossOrigin(maxAge = 360)
+@CrossOrigin(maxAge = 360)
 @RequestMapping(path = "/api/CvBuilder")
 
 public class PersonneRestConroller {
@@ -80,7 +80,6 @@ public class PersonneRestConroller {
 		personneToFind.get().setAdresse_electronique(personne.getAdresse_electronique());
 		personneToFind.get().setCurriculumVitae(personne.getCurriculumVitae());
 		personneToFind.get().setDate_naissance(personne.getDate_naissance());
-		personneToFind.get().setMot_de_passe(personne.getMot_de_passe());
 		personneToFind.get().setNom(personne.getNom());
 		personneToFind.get().setPrenom(personne.getPrenom());
 		personneToFind.get().setSite_web(personne.getSite_web());
