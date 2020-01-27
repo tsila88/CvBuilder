@@ -1,0 +1,53 @@
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+  
+    <div class="container">
+        <hr>
+  
+        <div class="row">
+            <aside class="col-sm-4">
+  
+            </aside> <!-- col.// -->
+            <aside class="col-sm-4">
+  
+                <div class="card">
+                    <article class="card-body">
+  
+                        <h4 class="card-title text-center mb-4 mt-1">Authentication</h4>
+                        <div class="alert alert-danger " *ngIf="mode==1">
+                            <div class="row h-100 justify-content-center align-items-center" ><strong>
+                                Bad credentials
+                            </strong></div>
+                            
+                        </div>
+                        <hr>
+                        <!-- ngForm permet de passer de nommé le formulaire, les valeurs entrées dans le formulaire 
+                        sont obtenues grace à nomFormulaire.value -->
+                        <form #f="ngForm" (ngSubmit) = "onLogin(f.value)">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                    </div>
+                                    <input name="username" ngModel="" class="form-control" placeholder="Username" type="email" required>
+                                </div> <!-- input-group.// -->
+                            </div> <!-- form-group// -->
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                                    </div>
+                                    <input   name="password" ngModel="" class="form-control" placeholder="**********" type="password" required>
+                                </div> <!-- input-group.// -->
+                            </div> <!-- form-group// -->
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block"> Login </button>
+                            </div> <!-- form-group// -->
+                            <p class="text-center"><a href="#" class="btn">Forgot password?</a></p>
+                        </form>
+                    </article>
+                </div> <!-- card.// -->
+  
+            </aside> <!-- col.// -->
+        </div> <!-- row.// -->
+    </div>

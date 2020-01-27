@@ -32,7 +32,7 @@ public class CurriculumVitae implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+	private String name;
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "curriculumVitae",orphanRemoval = true)
 	private List<Activite> activites;
 

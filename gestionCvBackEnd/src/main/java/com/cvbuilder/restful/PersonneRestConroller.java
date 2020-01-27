@@ -22,7 +22,7 @@ import com.cvbuilder.entities.Personne;
 
 @RestController
 @CrossOrigin(maxAge = 360)
-@RequestMapping(path = "/api/CvBuilder")
+//@RequestMapping(path = "/api/CvBuilder")
 
 public class PersonneRestConroller {
 

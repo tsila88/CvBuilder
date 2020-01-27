@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -35,7 +36,7 @@ public class Personne implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String userName;
+	private String username;
 	//@JsonIgnore
 	private String password;
 	private String nom;
@@ -43,7 +44,7 @@ public class Personne implements Serializable {
 	private String prenom;
 	private String adresse_electronique;
 	private String site_web;
-	private LocalDate date_naissance;
+	private Date date_naissance;
 	private String texte_descriptif;
 	@OneToOne(mappedBy = "personne", cascade = CascadeType.ALL, fetch = FetchType.LAZY,orphanRemoval = true)
 	private CurriculumVitae curriculumVitae;

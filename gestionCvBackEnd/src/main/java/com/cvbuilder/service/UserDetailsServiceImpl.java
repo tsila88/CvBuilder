@@ -10,9 +10,11 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
 import com.cvbuilder.entities.Personne;
 
+@Service
 public class UserDetailsServiceImpl implements UserDetailsService{
 
 	@Autowired
@@ -20,14 +22,14 @@ public class UserDetailsServiceImpl implements UserDetailsService{
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		Personne personne = accountService.findUserByName(username);
+		Personne personne = accountService.findUserByUsername(username);
 		if (personne == null ) throw new UsernameNotFoundException(username);
 		
 		Collection<GrantedAuthority> authorities = new ArrayList<>();
 		personne.getRoles().forEach(role -> {
 			authorities.add(new SimpleGrantedAuthority(role.getRole()));
 		});
-		return new User(personne.getUserName(),personne.getPassword(),authorities);
+		return new User(personne.getUsername(),personne.getPassword(),authorities);
 	}
 
 }

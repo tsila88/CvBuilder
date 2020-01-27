@@ -24,23 +24,22 @@ public class AccountServiceImpl implements AccountService {
 	private RoleRepository roleRepository;
 
 	@Override
-	public Personne saveUser(Personne personne) {
-		String hashPassword = bCryptPasswordEncoder.encode(personne.getPassword());
-		personne.setPassword(hashPassword);
-		return personneRepository.save(personne);
+	public Personne saveUser(Personne user) {
+		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+		return personneRepository.save(user);
 	}
 
 	@Override
 	public void addRoleToUser(String username, String roleName) {
 		Role role = roleRepository.findByRole(roleName);
-		Personne personne = personneRepository.findByUserName(username);
-		personne.getRoles().add(role);
+		Personne user = personneRepository.findByUsername(username);
+		user.getRoles().add(role);
 
 	}
 
 	@Override
-	public Personne findUserByName(String name) {
-		return personneRepository.findByUserName(name);
+	public Personne findUserByUsername(String name) {
+		return personneRepository.findByUsername(name);
 	}
 
 	@Override

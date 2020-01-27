@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 <div class="container-fluid"> 
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-primary ">
     <a class="navbar-brand logo" href="#"><h1>CV➜BUILDER</h1></a>
@@ -6,20 +7,22 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <a class="nav-link" href="#"><h3>Create CV</h3> </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><h3>Lists of CVs </h3> </a>
-        </li>
-        <li>
-          
+          <a class="nav-link" href="#" routerLink="listPersonne"><h3>Lists of Persons </h3> </a>
         </li>
       </ul>
+        <button type="button" class="btn btn-dark"  routerLink="login">Login <i class="fas fa-sign-in-alt"></i> </button>
     </div>
   </nav>
-  <div>
+</div>
+
+    
+
+ <!--
     <body>
 
       <div>
@@ -100,6 +103,13 @@
         </svg></h1>
         <h1> CvBuilder</h1>
 		</div>
-	</body>
-  </div>
-</div>
+  </body>
+   -->
+
+
+<!-- The modal to show when loging -->
+
+
+
+
+<router-outlet></router-outlet>

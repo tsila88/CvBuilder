@@ -8,6 +8,6 @@ import com.cvbuilder.entities.Personne;
 @Repository
 public interface PersonneRepository extends JpaRepository<Personne, Long> {
 	
-	public Personne findByUserName(String username);
+	public Personne findByUsername(String username);
 
 }

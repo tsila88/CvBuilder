@@ -1,7 +1,7 @@
 package com.cvbuilder.service;
 
-import com.cvbuilder.entities.Role;
 import com.cvbuilder.entities.Personne;
+import com.cvbuilder.entities.Role;
 
 public interface AccountService {
 
@@ -11,6 +11,8 @@ public interface AccountService {
 
 	public void addRoleToUser(String username, String roleName);
 	
-	public Personne findUserByName(String name);
+	public Personne findUserByUsername(String username);
+
+	
 
 }

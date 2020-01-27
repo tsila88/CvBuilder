@@ -80,6 +80,13 @@
 			<artifactId>jjwt</artifactId>
 			<version>0.9.1</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/io.codearte.jfairy/jfairy -->
+		<dependency>
+			<groupId>io.codearte.jfairy</groupId>
+			<artifactId>jfairy</artifactId>
+			<version>0.5.9</version>
+		</dependency>
 
 	</dependencies>
 
